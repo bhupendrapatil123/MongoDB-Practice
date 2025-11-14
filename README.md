@@ -41,6 +41,16 @@ mongodb-scripts/
   - Delete a single document: db.contacts.deleteOne({ name: "Alice" })
   - Delete multiple documents: db.contacts.deleteMany({ category: "Electronics" })
 
+### 5. `05_aggregation.mongodb.js`
+- Contains aggregation pipeline examples.
+- Examples include:
+
+  - Filter fruits and project fields:
+    db.sales.aggregate([{ $match: { category: "Fruit" } }, { $project: { _id: 0, item: 1, quantity: 1 } }])
+
+  - Group by category and calculate total sales:
+    db.sales.aggregate([{ $group: { _id: "$category", totalSales: { $sum: { $multiply: ["$price", "$quantity"] } } } }])
+
 ---
 
 ## ⚡ How to Run
