@@ -33,7 +33,13 @@ mongodb-scripts/
 - Examples include:  
   - Update the price of a product: `$set`  
   - Increment stock for multiple products: `$inc`  
-  - Add a tag to an array field: `$push`  
+  - Add a tag to an array field: `$push`
+
+### 4. `04_delete.mongodb.js`
+- Contains **delete operations**.
+- Examples include:
+  - Delete a single document: db.contacts.deleteOne({ name: "Alice" })
+  - Delete multiple documents: db.contacts.deleteMany({ category: "Electronics" })
 
 ---
 
