@@ -44,13 +44,21 @@ mongodb-scripts/
 ### 5. `05_aggregation.mongodb.js`
 - Contains aggregation pipeline examples.
 - Examples include:
-
   - Filter fruits and project fields:
     db.sales.aggregate([{ $match: { category: "Fruit" } }, { $project: { _id: 0, item: 1, quantity: 1 } }])
-
   - Group by category and calculate total sales:
     db.sales.aggregate([{ $group: { _id: "$category", totalSales: { $sum: { $multiply: ["$price", "$quantity"] } } } }])
 
+### 6. `06_indexes.mongodb.js`
+- Contains index-related operations.
+- Examples include:
+  - Create an index on a field:
+    db.sales.createIndex({ quantity: 1 })
+  - View all indexes in a collection:
+    db.sales.getIndexes()
+  - Check query performance using explain:
+    db.sales.find({ quantity: 10 }).explain("executionStats")
+    
 ---
 
 ## ⚡ How to Run
