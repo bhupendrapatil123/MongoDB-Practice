@@ -5,12 +5,13 @@ This repository contains **MongoDB scripts** for practicing basic database opera
 ---
 
 ## 📁 File Structure
-
+```
 mongodb-scripts/
 ├── 01_setup.mongodb.js # MongoDB setup: create database & collections
 ├── 02_reading.mongodb.js # MongoDB read queries: find, filter, and query data
 ├── 03_update.mongodb.js # MongoDB update queries: updateOne, updateMany, $push, $inc
 └── README.md # Project overview and instructions
+```
 
 ---
 
